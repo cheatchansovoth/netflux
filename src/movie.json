@@ -1,0 +1,298 @@
+[
+    {
+      "title": "La La Land",
+      "description": "A jazz pianist falls for an aspiring actress in Los Angeles.",
+      "image_url": "https://pics.filmaffinity.com/La_La_Land-262021831-large.jpg",
+      "genre": "Musical/Romance",
+      "year": 2016,
+      "trailer_url": "https://www.youtube.com/watch?v=0pdqf4P9MB8"
+    },
+    {
+      "title": "Moonlight",
+      "description": "A young African-American man grapples with his identity and sexuality while experiencing the struggles of childhood, adolescence, and adulthood.",
+      "image_url": "https://m.media-amazon.com/images/M/MV5BNzQxNTIyODAxMV5BMl5BanBnXkFtZTgwNzQyMDA3OTE@._V1_.jpg",
+      "genre": "Drama",
+      "year": 2016,
+      "trailer_url": "https://www.youtube.com/watch?v=9NJj12tJzqc"
+    },
+    {
+      "title": "The Revenant",
+      "description": "A frontiersman on a fur trading expedition in the 1820s fights for survival after being mauled by a bear and left for dead by members of his own hunting team.",
+      "image_url": "https://m.media-amazon.com/images/M/MV5BMDE5OWMzM2QtOTU2ZS00NzAyLWI2MDEtOTRlYjIxZGM0OWRjXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_.jpg",
+      "genre": "Adventure/Drama",
+      "year": 2015,
+      "trailer_url": "https://www.youtube.com/watch?v=LoebZZ8K5N0"
+    },
+    {
+      "title": "Mad Max: Fury Road",
+      "description": "In a post-apocalyptic wasteland, a woman rebels against a tyrannical ruler in search for her homeland with the aid of a group of female prisoners, a psychotic worshipper, and a drifter named Max.",
+      "image_url": "https://static.wikia.nocookie.net/roadwarrior/images/7/7c/Mad-Max_Fury-Road_Poster_006.jpg/revision/latest/scale-to-width-down/1200?cb=20150521135624",
+      "genre": "Action/Adventure",
+      "year": 2015,
+      "trailer_url": "https://www.youtube.com/watch?v=hEJnMQG9ev8"
+    },
+    {
+      "title": "Get Out",
+      "description": "A young African-American visits his white girlfriend's parents for the weekend, where his simmering uneasiness about their reception of him eventually reaches a boiling point.",
+      "image_url": "https://m.media-amazon.com/images/M/MV5BMjUxMDQwNjcyNl5BMl5BanBnXkFtZTgwNzcwMzc0MTI@._V1_.jpg",
+      "genre": "Horror/Mystery",
+      "year": 2017,
+      "trailer_url": "https://www.youtube.com/watch?v=DzfpyUB60YY"
+    },
+    {
+      "title": "The Shape of Water",
+      "description": "At a top secret research facility in the 1960s, a lonely janitor forms a unique relationship with an amphibious creature that is being held in captivity.",
+      "image_url": "https://mpd-biblio-covers.imgix.net/9781250165374.jpg",
+      "genre": "Drama/Fantasy",
+      "year": 2017,
+      "trailer_url": "https://www.youtube.com/watch?v=XFYWazblaUA"
+    },
+    {
+      "title": "Dunkirk",
+      "description": "Allied soldiers from Belgium, the British Empire, and France are surrounded by the German Army and evacuated during a fierce battle in World War II.",
+      "image_url": "https://m.media-amazon.com/images/M/MV5BMmE0ZmUzYzUtMzE5Ni00OGM4LWJhMjEtOWZmYWQwYzA5NDM5XkEyXkFqcGdeQXVyMTExNDQ2MTI@._V1_.jpg",
+      "genre": "Action/Drama",
+	  "year": 2017,
+	  "trailer_url": "https://www.youtube.com/watch?v=F-eMt3SrfFU"
+	},
+	{
+	  "title": "The Big Short",
+	  "description": "In 2006-7 a group of investors bet against the US mortgage market. In their research they discover how flawed and corrupt the market is.",
+	  "image_url": "https://m.media-amazon.com/images/M/MV5BNDc4MThhN2EtZjMzNC00ZDJmLThiZTgtNThlY2UxZWMzNjdkXkEyXkFqcGdeQXVyNDk3NzU2MTQ@._V1_FMjpg_UX1000_.jpg",
+	  "genre": "Drama/Comedy",
+	  "year": 2015,
+	  "trailer_url": "https://www.youtube.com/watch?v=vgqG3ITMv1Q"
+	},
+	{
+	  "title": "Blade Runner 2049",
+	  "description": "A young blade runner's discovery of a long-buried secret leads him to track down former blade runner Rick Deckard, who's been missing for thirty years.",
+	  "image_url": "https://m.media-amazon.com/images/M/MV5BNzA1Njg4NzYxOV5BMl5BanBnXkFtZTgwODk5NjU3MzI@._V1_FMjpg_UX1000_.jpg",
+	  "genre": "Sci-Fi/Thriller",
+	  "year": 2017,
+	  "trailer_url": "https://www.youtube.com/watch?v=gCcx85zbxz4"
+	},
+	{
+	  "title": "The Martian",
+	  "description": "An astronaut becomes stranded on Mars after his team assume him dead, and must rely on his ingenuity to find a way to signal to Earth that he is alive.",
+	  "image_url": "https://www.example.com/images/the_martian.jpg",
+	  "genre": "Sci-Fi/Adventure",
+	  "year": 2015,
+	  "trailer_url": "https://www.youtube.com/watch?v=ej3ioOneTy8"
+	},
+	{
+	  "title": "Arrival",
+	  "description": "A linguist works with the military to communicate with alien lifeforms after twelve mysterious spacecraft appear around the world.",
+	  "image_url": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/B8FAA8CC2125376F97D44EA1C347423277C255FB0E1526BBA03A301983A04BEE/scale?width=1200&aspectRatio=1.78&format=jpeg",
+	  "genre": "Sci-Fi/Drama",
+	  "year": 2016,
+	  "trailer_url": "https://www.youtube.com/watch?v=tFMo3UJ4B4g"
+	},
+	{
+	  "title": "The Hateful Eight",
+	  "description": "In the dead of a Wyoming winter, a bounty hunter and his prisoner find shelter in a cabin currently inhabited by a collection of nefarious characters.",
+	  "image_url": "https://images.squarespace-cdn.com/content/v1/58716708e6f2e1d4215d7320/1494743462799-3SGQE9BJMS8ZQ31IE71C/1.+Hateful+Eight+Poster+Pic.jpg",
+	  "genre": "Western/Thriller",
+	  "year": 2015,
+	  "trailer_url": "https://www.youtube.com/watch?v=gnRbXn4-Yis"
+	},
+	{
+	  "title": "The Lobster",
+	  "description": "In a dystopian near future, single people, according to the laws of The City, are taken to The Hotel, where they are obliged to find a romantic partner in forty-five days or are transformed into beasts and sent off into The Woods.",
+	  "image_url": "https://m.media-amazon.com/images/M/MV5BNDQ1NDE5NzQ1NF5BMl5BanBnXkFtZTgwNzA5OTM2NTE@._V1_.jpg",
+	  "genre": "Drama/Romance",
+	  "year": 2015,
+	  "trailer_url": "https://www.youtube.com/watch?v=TR_NcqD-Gfs"
+	},
+	{
+	  "title": "Sicario",
+	  "description": "An idealistic FBI agent is enlisted by a government task force to aid in the escalating war against drugs at the border area between the U.S. and Mexico.",
+	  "image_url": "https://ntvb.tmsimg.com/assets/p11539968_v_h8_bg.jpg?w=960&h=540",
+	  "genre": "Crime/Thriller",
+	  "year": 2015,
+	  "trailer_url": "https://www.youtube.com/watch?v=sR0SDT2GeFg"
+	},
+	{
+	  "title": "Whiplash",
+	  "description": "A promising young drummer enrolls at a cut-throat music conservatory where his dreams of greatness are mentored by an instructor who will stop at nothing to realize a student's potential.",
+	  "image_url": "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/914trm0WbIL._AC_SL1500_.jpg",
+	  "genre": "Drama/Music",
+	  "year": 2014,
+	  "trailer_url": "https://www.youtube.com/watch?v=7d_jQycdQGo"
+	},
+	{
+		"title": "The Shawshank Redemption",
+		"description": "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.",
+		"image_url": "https://m.media-amazon.com/images/I/51GuoRbRfNL._AC_SY580_.jpg",
+		"genre": "Drama",
+		"year": 1994,
+		"trailer_url": "https://www.youtube.com/watch?v=6hB3S9bIaco"
+	  },
+	  {
+		"title": "Forrest Gump",
+		"description": "The presidencies of Kennedy and Johnson, the events of Vietnam, Watergate, and other history unfold through the perspective of an Alabama man with an IQ of 75.",
+		"image_url": "https://m.media-amazon.com/images/I/51J9WjKkM-L._AC_SY445_.jpg",
+		"genre": "Drama",
+		"year": 1994,
+		"trailer_url": "https://www.youtube.com/watch?v=bLvqoHBptjg"
+	  },
+	  {
+		"title": "The Godfather",
+		"description": "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.",
+		"image_url": "https://m.media-amazon.com/images/I/51Bm1zWqCiL._AC_SY445_.jpg",
+		"genre": "Drama",
+		"year": 1972,
+		"trailer_url": "https://www.youtube.com/watch?v=sY1S34973zA"
+	  },
+	  {
+		"title": "A Star Is Born",
+		"description": "A musician helps a young singer find fame as age and alcoholism send his own career into a downward spiral.",
+		"image_url": "https://m.media-amazon.com/images/I/61p4u4JgM-L._AC_SY445_.jpg",
+		"genre": "Drama",
+		"year": 2018,
+		"trailer_url": "https://www.youtube.com/watch?v=nSbzyEJ8X9E"
+	  },
+	  {
+		"title": "Schindler's List",
+		"description": "In German-occupied Poland during World War II, industrialist Oskar Schindler gradually becomes concerned for his Jewish workforce after witnessing their persecution by the Nazis.",
+		"image_url": "https://m.media-amazon.com/images/I/51W8s2QbHcL._AC_SY445_.jpg",
+		"genre": "Drama",
+		"year": 1993,
+		"trailer_url": "https://www.youtube.com/watch?v=gG22XNhtnoY"
+	  },
+	  {
+		"title": "The Social Network",
+		"description": "As Harvard student Mark Zuckerberg creates the social networking site that would become known as Facebook, he is sued by the twins who claimed he stole their idea, and by the co-founder who was later squeezed out of the business.",
+		"image_url": "https://m.media-amazon.com/images/I/41fxgXUceSL._AC_SY445_.jpg",
+		"genre": "Drama",
+		"year": 2010,
+		"trailer_url": "https://www.youtube.com/watch?v=lB95KLmpLR4"
+	  },
+	  {
+		"title": "Good Will Hunting",
+		"description": "Will Hunting, a janitor at M.I.T., has a gift for mathematics, but needs help from a psychologist to find direction in his life.",
+		"image_url": "https://m.media-amazon.com/images/I/51z9ZvBL5ZL._AC_SY445_.jpg",
+		"genre": "Drama",
+		"year": 1997,
+		"trailer_url": "https://www.youtube.com/watch?v=PaZVjZEFkRs"
+		},
+		{
+		"title": "The Prestige",
+		"description": "After a tragic accident, two stage magicians engage in a battle to create the ultimate illusion while sacrificing everything they have to outwit each other.",
+		"image_url": "https://m.media-amazon.com/images/I/51Ib+tTJwfL._AC_SY445_.jpg",
+		"genre": "Drama",
+		"year": 2006,
+		"trailer_url": "https://www.youtube.com/watch?v=o4gHCmTQDVI"
+		},
+		{
+		"title": "The Imitation Game",
+		"description": "During World War II, the English mathematical genius Alan Turing tries to crack the German Enigma code with help from fellow mathematicians.",
+		"image_url": "https://m.media-amazon.com/images/I/51ccNgpfFkL._AC_SY445_.jpg",
+		"genre": "Drama",
+		"year": 2014,
+		"trailer_url": "https://www.youtube.com/watch?v=S5CjKEFb-sM"
+		},
+		{
+			"title": "Die Hard",
+			"description": "An NYPD officer tries to save his wife and several others taken hostage by German terrorists during a Christmas party at the Nakatomi Plaza in Los Angeles.",
+			"image_url": "https://m.media-amazon.com/images/I/61I1gGG8YUL._AC_SY445_.jpg",
+			"genre": "Action",
+			"year": 1988,
+			"trailer_url": "https://www.youtube.com/watch?v=-qxBXm7ZUTM"
+		  },
+		  {
+			"title": "Terminator 2: Judgment Day",
+			"description": "A cyborg, identical to the one who failed to kill Sarah Connor, must now protect her teenage son, John Connor, from a more advanced and powerful cyborg.",
+			"image_url": "https://m.media-amazon.com/images/I/51M7WP9TstL._AC_SY445_.jpg",
+			"genre": "Action",
+			"year": 1991,
+			"trailer_url": "https://www.youtube.com/watch?v=eajuMYNYtuY"
+		  },
+		  {
+			"title": "Kill Bill: Vol. 1",
+			"description": "After awakening from a four-year coma, a former assassin wreaks vengeance on the team of assassins who betrayed her.",
+			"image_url": "https://m.media-amazon.com/images/I/51bGcS8M2JL._AC_SY445_.jpg",
+			"genre": "Action",
+			"year": 2003,
+			"trailer_url": "https://www.youtube.com/watch?v=ot6C1ZKyiME"
+			},
+			{
+			"title": "The Dark Knight",
+			"description": "When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.",
+			"image_url": "https://m.media-amazon.com/images/I/51EG732BV3L._AC_SY445_.jpg",
+			"genre": "Action",
+			"year": 2008,
+			"trailer_url": "https://www.youtube.com/watch?v=EXeTwQWrcwY"
+			},
+			{
+			"title": "Taken",
+			"description": "A retired CIA agent travels across Europe and relies on his old skills to save his estranged daughter, who has been kidnapped while on a trip to Paris.",
+			"image_url": "https://m.media-amazon.com/images/I/51bcN1OswyL._AC_SY445_.jpg",
+			"genre": "Action",
+			"year": 2008,
+			"trailer_url": "https://www.youtube.com/watch?v=uPJVJBm9TPA"
+			},
+			{
+			"title": "John Wick",
+			"description": "An ex-hit-man comes out of retirement to track down the gangsters that took everything from him.",
+			"image_url": "https://m.media-amazon.com/images/I/71DvLaKl26L._AC_SL1084_.jpg",
+			"genre": "Action",
+			"year": 2014,
+			"trailer_url": "https://www.youtube.com/watch?v=2AUmvWm5ZDQ"
+			},
+			{
+			"title": "Mission: Impossible - Fallout",
+			"description": "Ethan Hunt and his IMF team, along with some familiar allies, race against time after a mission gone wrong.",
+			"image_url": "https://m.media-amazon.com/images/I/71zR+R+bYfL._AC_SY445_.jpg",
+			"genre": "Action",
+			"year": 2018,
+			"trailer_url": "https://www.youtube.com/watch?v=wb49-oV0F78"
+			},
+			{
+			"title": "Gladiator",
+			"description": "A former Roman General sets out to exact vengeance against the corrupt emperor who murdered his family and sent him into slavery.",
+			"image_url": "https://m.media-amazon.com/images/I/51GdxU6yQQL._AC_SY445_.jpg",
+			"genre": "Action",
+			"year": 2000,
+			"trailer_url": "https://www.youtube.com/watch?v=ol67qo3WhJk"
+			},
+			{
+				"title": "Your Name.",
+				"description": "Two strangers find themselves linked in a bizarre way. When a connection forms, will distance be the only thing to keep them apart?",
+				"image_url": "https://m.media-amazon.com/images/I/81A0s8sMwXL._AC_SY550_.jpg",
+				"genre": "Anime/Romance",
+				"year": 2016,
+				"trailer_url": "https://www.youtube.com/watch?v=xU47nhruN-Q"
+				},
+				{
+				"title": "Akira",
+				"description": "A secret military project endangers Neo-Tokyo when it turns a biker gang member into a rampaging psychic psychopath who can only be stopped by two teenagers and a group of psychics.",
+				"image_url": "https://m.media-amazon.com/images/I/71j+Kth7V1L._AC_SY679_.jpg",
+				"genre": "Anime/Sci-Fi",
+				"year": 1988,
+				"trailer_url": "https://www.youtube.com/watch?v=fUkHgX7wfyk"
+				},
+				{
+				"title": "Grave of the Fireflies",
+				"description": "A young boy and his little sister struggle to survive in Japan during World War II.",
+				"image_url": "https://m.media-amazon.com/images/I/71-2EvdBmLL._AC_SL1024_.jpg",
+				"genre": "Anime/War",
+				"year": 1988,
+				"trailer_url": "https://www.youtube.com/watch?v=4vPeTSRd580"
+				},
+				{
+				"title": "Ghost in the Shell",
+				"description": "A cyborg policewoman and her partner hunt a mysterious and powerful hacker called the Puppet Master.",
+				"image_url": "https://m.media-amazon.com/images/I/51E99HBlWXL._AC_SY445_.jpg",
+				"genre": "Anime/Sci-Fi",
+				"year": 1995,
+				"trailer_url": "https://www.youtube.com/watch?v=p2MEcnkC7xQ"
+				},
+				{
+				"title": "Paprika",
+				"description": "When a machine that allows therapists to enter their patients' dreams is stolen, all Hell breaks loose. Only a young female therapist, Paprika, can stop it.",
+				"image_url": "https://m.media-amazon.com/images/I/51wk9+qEtkL._AC_.jpg",
+				"genre": "Anime/Sci-Fi",
+				"year": 2006,
+				"trailer_url": "https://www.youtube.com/watch?v=yn7U1JiGQxg"
+				}
+]
