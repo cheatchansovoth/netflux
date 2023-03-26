@@ -1,20 +1,14 @@
 import './App.css';
-import movie from './movie.json';
+import { MovieList } from './component/MovieList';
+import { RandomMovie } from './component/RandomMovie';
 function App() {
+
+ 
   return (
     <div className="App">
-      <div className=''>
-      {
-          movie.map((movie) => {
-            return (
-                <div className=' '>
-                <img src={movie.image_url} alt={movie.title} />
-                <p>{movie.title}</p>
-                </div>
-            );
-          })
-        }
-      </div>
+
+      <RandomMovie/>
+      <MovieList/>
     </div>
   );
 }
