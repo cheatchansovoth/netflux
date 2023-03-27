@@ -15,7 +15,7 @@ export const MovieList = () => {
             breakpoint: 1024,
             settings: {
               slidesToShow: 4,
-              slidesToScroll: 1,
+              // slidesToScroll: 1,
               infinite: false,
             },
           },
@@ -23,7 +23,7 @@ export const MovieList = () => {
             breakpoint: 768,
             settings: {
               slidesToShow: 3,
-              slidesToScroll: 1,
+              // slidesToScroll: 1,
               initialSlide: 1,
             },
           },
@@ -31,16 +31,16 @@ export const MovieList = () => {
             breakpoint: 480,
             settings: {
               slidesToShow: 2,
-              slidesToScroll: 1,
+              // slidesToScroll: 1,
             },
           },
         ],
       };
       
       return (
-        <div className='mx-3 space-y-5'>
+        <div className=' space-y-5'>
             <h1 className='text-4xl font-bold font-sans'>Drama</h1>
-        <div className="space-y-5 w-4/5 flex flex-col mx-auto">
+        <div className="space-y-5 w-4/5 lg:mx-auto ">
           <Slider arrows={false} {...settings}>
             {movie
             //   .filter((movie) => movie.genre === "Drama")
