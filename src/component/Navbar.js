@@ -47,10 +47,10 @@ export const Navbar = () => {
     </ul>
   </div>
   <form className='w-1/2 mx-5'>
+  <div class="flex ">
   <div class="flex justify-center items-center">
-  <div class="flex">
     <div class="p-2">
-      <TbSearch class="text-4xl" />
+      <TbSearch class="text-2xl" />
     </div>
     <div class="p-2">
       <input type="text" placeholder="Enter keywords..." class="input input-bordered w-full max-w-xs ml-2" />

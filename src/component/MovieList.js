@@ -1,9 +1,30 @@
-import React from 'react'
+import React, { useState, useEffect } from "react";
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import movie from './data/movie.json'
 export const MovieList = () => {
+
+  const [movie, setMovies] = useState([]);
+  const [animation,setAnimation] = useState([]);
+  const API_KEY='637d2db3e80388b60c60f95c464752e6'
+  useEffect(() => {
+    const fetchMoviesAction = async () => {
+              const response = await fetch(
+                `https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&with_genres=28`
+              );
+              const data = await response.json();
+              setMovies(data.results);
+            };
+    const fetchMoviesAnimaton = async () => {
+              const response = await fetch(
+                `https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&with_genres=16`
+              );
+              const data = await response.json();
+              setAnimation(data.results);
+            };
+            fetchMoviesAction();
+            fetchMoviesAnimaton();
+          }, []);
     const settings = {
         dots: false,
         infinite: false,
@@ -38,16 +59,28 @@ export const MovieList = () => {
       };
       
       return (
-        <div className=' space-y-5'>
-            <h1 className='text-4xl font-bold font-sans hero-content'>Drama</h1>
+        <div className='space-y-5'>
+        <h1 className='text-4xl font-bold font-sans hero-content'>Action</h1>
         <div className="space-y-5 w-4/5 lg:mx-auto ">
           <Slider arrows={false} {...settings}>
             {movie
-            //   .filter((movie) => movie.genre === "Drama")
+              // .filter((movie) => movie.genre_id.includes("Action"))
               .map((movie) => (
                 <div key={movie.title} className=''>
-                  <img src={movie.image_url} alt={movie.title}  className="h-[30vh] transition duration-500 hover:opacity-50" />
-                  <p>{movie.title}</p>
+                  <img src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt={movie.title}  className="h-[30vh] transition duration-500 hover:opacity-50" />
+                  <p className="w-3/5">{movie.title}</p>
+                </div>
+              ))}
+          </Slider>
+        </div>
+        <h1 className='text-4xl font-bold font-sans hero-content'>Animation</h1>
+        <div className="space-y-5 w-4/5 lg:mx-auto ">
+          <Slider arrows={false} {...settings}>
+            {animation
+              .map((movie) => (
+                <div key={movie.title} className=''>
+                  <img src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt={movie.title}  className="h-[30vh] transition duration-500 hover:opacity-50" />
+                  <p className="w-3/5">{movie.title}</p>
                 </div>
               ))}
           </Slider>
