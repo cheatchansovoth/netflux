@@ -39,7 +39,7 @@ export const MovieList = () => {
       
       return (
         <div className=' space-y-5'>
-            <h1 className='text-4xl font-bold font-sans'>Drama</h1>
+            <h1 className='text-4xl font-bold font-sans hero-content'>Drama</h1>
         <div className="space-y-5 w-4/5 lg:mx-auto ">
           <Slider arrows={false} {...settings}>
             {movie
