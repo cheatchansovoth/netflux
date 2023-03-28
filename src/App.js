@@ -9,6 +9,8 @@ import {MovieContext} from './component/movieContext';
 import { Movies } from './component/Movies';
 import { TvShows } from './component/TvShows';
 import TVDetails from './component/data/TVDetails';
+import { ActionMovie } from './component/ActionMovie';
+import { Animation } from './component/Animation';
 function App() {
 
   const [searchMovie,setMovieResult]=useState('');
@@ -21,6 +23,8 @@ function App() {
       <Routes>
         <Route path='/' exact element={<RandomMovie/>}></Route>
         <Route path='/movie' element={<MovieList/>}></Route>
+        <Route path='/movie/action' element={<ActionMovie/>}></Route>
+        <Route path='/movie/animation' element={<Animation/>}></Route>
         <Route path='/tvshows' element={<TvShows/>}></Route>
         <Route path='/tvshows/:showid' element={<TVDetails/>}></Route>
         <Route path='/tvshows/:showid/:episode' element={<TVDetails/>}></Route>
