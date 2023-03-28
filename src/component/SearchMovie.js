@@ -1,6 +1,6 @@
 import React,{useState,useEffect,useContext} from 'react'
 import { MovieContext } from './movieContext';
-import { useParams } from 'react-router-dom';
+import { useParams,useNavigate } from 'react-router-dom';
 export const SearchMovie = () => {
     const API_KEY='637d2db3e80388b60c60f95c464752e6';
     const { searchMovie } = useContext(MovieContext);
@@ -8,7 +8,12 @@ export const SearchMovie = () => {
     const { query } = useParams();
     const decodedQuery = decodeURIComponent(query);
     const searchQuery = decodedQuery || searchMovie;
-    
+    const navigate = useNavigate();
+    const handleClick=(id)=>
+    {
+      navigate(`/movies/${id}`);
+    }
+    ;
     useEffect(() => {
       const searchMovies = async () => {
         const response = await fetch(
@@ -26,7 +31,7 @@ export const SearchMovie = () => {
               <div className="grid grid-cols-4 gap-4 w-4/5 mx-auto">
             {movieResult
               .map((movie) => (
-                <div key={movie.title} className=''>
+                <div key={movie.title} onClick={()=>handleClick(movie.id)}>
                   <img src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt={movie.title}  className="h-[30vh] transition duration-500 hover:opacity-50" />
                   <p className="w-3/5">{movie.title}</p>
                 </div>
