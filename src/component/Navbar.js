@@ -1,6 +1,17 @@
-import React from 'react'
+import React, { useEffect,useState,useContext,} from 'react'
+import {useNavigate} from 'react-router-dom';
 import { TbSearch } from "react-icons/tb";
+import { MovieContext } from './movieContext';
 export const Navbar = () => {
+
+  const API_KEY='637d2db3e80388b60c60f95c464752e6';
+  const {searchMovie,setMovieResult } = useContext(MovieContext);
+  const navigate = useNavigate();
+  const handleKeyDown = (event) => {
+    if (event.key === 'Enter') {
+      navigate(`/search/${searchMovie}`);
+    }
+  };
   return (
     <div>
 
@@ -25,7 +36,7 @@ export const Navbar = () => {
         <li><a>Country</a></li>
       </ul>
     </div>
-    <a className="btn btn-ghost normal-case text-xl text-red-500">NetFlux</a>
+    <a className="btn btn-ghost normal-case text-xl text-red-500" href='/'>NetFlux</a>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
@@ -35,7 +46,7 @@ export const Navbar = () => {
           Genre
           <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"/></svg>
         </a>
-        <ul className="p-2">
+        <ul className="p-2 ">
           <li><a>Action</a></li>
           <li><a>Drama</a></li>
           <li><a>Anime</a></li>
@@ -49,11 +60,18 @@ export const Navbar = () => {
   <form className='w-1/2 mx-5'>
   <div class="flex ">
   <div class="flex justify-center items-center">
+
     <div class="p-2">
-      <TbSearch class="text-2xl" />
+      <input type="text" placeholder="Enter keywords..." class="input input-bordered w-full max-w-xs ml-2" onChange={(event)=>
+      {
+        setMovieResult(event.target.value);
+      }
+      }
+      onKeyDown={handleKeyDown}
+      />
     </div>
     <div class="p-2">
-      <input type="text" placeholder="Enter keywords..." class="input input-bordered w-full max-w-xs ml-2" />
+      <TbSearch class="text-2xl" />
     </div>
   </div>
 </div>
