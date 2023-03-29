@@ -28,7 +28,7 @@ export const SearchMovie = () => {
   return (
     <div className='space-y-5'>
       <p className='text-center text-3xl'>You have searched for : <span className='font-semibold'>{decodedQuery}</span></p>
-              <div className="grid grid-cols-4 gap-4 w-4/5 mx-auto">
+              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 w-4/5 mx-auto">
             {movieResult
               .map((movie) => (
                 <div key={movie.title} onClick={()=>handleClick(movie.id)}>

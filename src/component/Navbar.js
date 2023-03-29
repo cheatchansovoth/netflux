@@ -2,6 +2,9 @@ import React, { useEffect,useState,useContext,} from 'react'
 import {useNavigate} from 'react-router-dom';
 import { TbSearch } from "react-icons/tb";
 import { MovieContext } from './movieContext';
+import { FcGoogle } from "react-icons/fc";
+import {auth,GoogleAuth} from './Authentication/firebase';
+import {signInWithEmailAndPassword,signInWithPopup,signOut} from 'firebase/auth'
 export const Navbar = () => {
 
   const API_KEY='637d2db3e80388b60c60f95c464752e6';
@@ -10,6 +13,40 @@ export const Navbar = () => {
   const handleKeyDown = (event) => {
     if (event.key === 'Enter') {
       navigate(`/search/${searchMovie}`);
+    }
+  };
+  const SignUpOnClick=()=>
+  {
+    navigate(`/register`);
+  }
+  const [email,setEmail]=useState("");
+  const [password,setPassword]=useState("");
+  const [Error,setError]=useState("");
+  const SignIn= async ()=>
+  {
+    try{
+       await signInWithEmailAndPassword(auth,email,password);
+       const user=auth.currentUser;
+       console.log(user);
+       if(user)
+       {
+        // localStorage.setItem('__userinfo',JSON.stringify(user));
+        navigate('/');
+       }
+    }
+    catch(err)
+    {
+      setError('Invalid Credentials');
+    }
+  };
+  const SignInWithGoogle= async ()=>
+  {
+    try{
+    await signInWithPopup(auth,GoogleAuth);
+    }
+    catch(err)
+    {
+      setError('Invalid Credentials');
     }
   };
   return (
@@ -33,7 +70,6 @@ export const Navbar = () => {
             <li><a href='/movie/animation'>Anime</a></li>
           </ul>
         </li>
-        <li><a>Country</a></li>
       </ul>
     </div>
     <a className="btn btn-ghost normal-case text-xl text-red-500" href='/'>NetFlux</a>
@@ -46,21 +82,19 @@ export const Navbar = () => {
           Genre
           <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"/></svg>
         </a>
-        <ul className="p-2 ">
+        <ul className="p-2  bg-slate-700">
           <li><a href='/movie/action'>Action</a></li>
           <li><a href='/movie/animation'>Anime</a></li>
         </ul>
       </li>
-      <li><a>Country</a></li>
       <li><a href='/tvshows'>TV Shows</a></li>
-      <li><a>Top IMDB</a></li>
+      <li><a href='/movie/popular'>Top IMDB</a></li>
     </ul>
   </div>
   <form className='w-1/2 mx-5'>
   <div class="flex ">
   <div class="flex justify-center items-center">
-
-    <div class="p-2">
+    <div class="p-2 hidden sm:block">
       <input type="text" placeholder="Enter keywords..." class="input input-bordered w-full max-w-xs ml-2" onChange={(event)=>
       {
         setMovieResult(event.target.value);
@@ -77,7 +111,35 @@ export const Navbar = () => {
 
   </form>
   <div className="navbar-end">
-    <a className="btn">Login</a>
+{/* The button to open modal */}
+<label htmlFor="my-modal-3" className="btn">Login</label>
+    {/* Put this part before </body> tag */}
+    <input type="checkbox" id="my-modal-3" className="modal-toggle" />
+    <div className="modal ">
+      <div className="modal-box relative text-center">
+        <p className='text-2xl font-bold my-5'>Login</p>
+        <label htmlFor="my-modal-3" className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
+        <form className='space-y-5 flex flex-col justify-center items-center' onSubmit={SignIn}>
+        <input type="text" placeholder="Username" className="input input-bordered input-info w-full max-w-xs" onChange={(event)=>
+        {
+          setEmail(event.target.value);
+        }}/>
+        <input type="password" placeholder="Password" className="input input-bordered input-info w-full max-w-xs" onChange={(event)=>
+        {
+          setPassword(event.target.value)
+        }}/>
+        <button className="btn btn-info w-[70%]" type='submit'>Login</button>
+        </form>
+        <p className='cursor-pointer text-blue-400 my-3'>Forget password ?</p>
+        <p className='mb-3'>Not a Member ? <span className='cursor-pointer text-blue-400' onClick={SignUpOnClick}>Sign up</span></p>
+        <hr class="border-t-4 border-solid border-base-200"></hr>
+        <p>OR Using</p>
+        <div className="flex justify-center items-center my-3">
+        <p className="text-4xl cursor-pointer" onClick={SignInWithGoogle}><FcGoogle/></p>
+        </div>
+
+      </div>
+    </div>
   </div>
 </div>
     </div>

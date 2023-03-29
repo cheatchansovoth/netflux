@@ -69,7 +69,7 @@ export const MovieList = () => {
         <div className='space-y-5'>
         <h1 className='text-4xl font-bold font-sans hero-content'>Action</h1>
         <div className="space-y-5 w-4/5 lg:mx-auto ">
-          <Slider arrows={false} {...settings}>
+          <Slider arrows={true} {...settings}>
             {movie
               // .filter((movie) => movie.genre_id.includes("Action"))
               .map((movie) => (
@@ -82,7 +82,7 @@ export const MovieList = () => {
         </div>
         <h1 className='text-4xl font-bold font-sans hero-content'>Animation</h1>
         <div className="space-y-5 w-4/5 lg:mx-auto ">
-          <Slider arrows={false} {...settings}>
+          <Slider arrows={true} {...settings}>
             {animation
               .map((movie) => (
                 <div key={movie.title} className='cursor-pointer' onClick={()=>handleClick(movie.id)}>

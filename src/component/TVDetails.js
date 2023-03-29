@@ -36,7 +36,7 @@ const handleSeasonChange = (e) => {
   return (
     <div className="grid grid-cols-2">
           <div className="col-span-2 h-[80vh]">
-         <iframe src={embedUrl}  width="100%" height="100%" frameborder="0" allowfullscreen></iframe>
+         <iframe src={embedUrl}  width="100%" height="100%" frameborder="0" allow="fullscreen" allowfullscreen></iframe>
       </div>
       <div className="col-span-2 m-[2%]">
       <select className="select w-full max-w-xs" defaultValue="1" onChange={handleSeasonChange}>
@@ -79,8 +79,11 @@ const handleSeasonChange = (e) => {
               </div>
               <p className="w-3/5">{tvDetails.overview}</p>
               <p>Country: {tvDetails.origin_country}</p>
-                {tvDetails.genres && (
+              {tvDetails.genres && (
                 <p>Genre: {tvDetails.genres.map((genre) => genre.name).join(", ")}</p>
+              )}
+                {tvDetails.production_companies && (
+                <p>Production: {tvDetails.production_companies.map((genre) => genre.name).join(", ")}</p>
               )}
               <p>Release Date: {tvDetails.first_air_date}</p>
               <p>Language: {tvDetails.original_language}</p>

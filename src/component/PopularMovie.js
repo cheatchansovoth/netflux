@@ -1,7 +1,7 @@
 import React,{useState,useEffect} from 'react'
 import { useNavigate } from 'react-router-dom';
 
-export const TvShows = () => {
+export const PopularMovie = () => {
     const API_KEY='637d2db3e80388b60c60f95c464752e6';
     const [tvshows, setTvShows] = useState([]);
     const [activeButton, setActiveButton] = useState(1);
@@ -16,7 +16,7 @@ export const TvShows = () => {
     ;
     useEffect(() => {
         const fetchMoviesAction = async () => {
-            const response = await fetch(`https://api.themoviedb.org/3/discover/tv?api_key=${API_KEY}&page=${activeButton}`);
+            const response = await fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&page=${activeButton}`);
             const data = await response.json();
             setTvShows(data.results);
           };
@@ -29,7 +29,7 @@ export const TvShows = () => {
           .map((movie) => (
             <div key={movie.title} className='my-5' >
               <img src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt={movie.title}  onClick={()=>handleClick(movie.id)} className="h-[30vh] transition duration-500 hover:opacity-50 cursor-pointer" />
-              <p className="w-3/5 text-white text-lg font-semibold">{movie.name} </p>
+              <p className="w-3/5 text-white text-lg font-semibold">{movie.title} <span className='badge badge-accent'>HD</span></p>
               <p className="w-3/5 text-white">{movie.popularity} views</p>
             </div>
           ))}

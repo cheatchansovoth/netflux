@@ -30,12 +30,12 @@ export const ActionMovie = () => {
   }, [movieResult]);
   return (
     <div className='space-y-5'>
-      <p className='text-center text-3xl'>You have searched for : <span className='font-semibold'>{}</span></p>
-              <div className="grid grid-cols-4 gap-4 w-4/5 mx-auto">
+                {/* <p className='text-center text-3xl'>You have searched for : <span className='font-semibold'>{}</span></p> */}
+              <div className="grid  grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 w-4/5 mx-auto">
             {movieResult
               .map((movie) => (
-                <div key={movie.title} onClick={()=>handleClick(movie.id)}>
-                  <img src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt={movie.title}  className="h-[30vh] transition duration-500 hover:opacity-50" />
+                <div key={movie.title} >
+                  <img src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt={movie.title}  onClick={()=>handleClick(movie.id)} className="h-[30vh] transition duration-500 hover:opacity-50 cursor-pointer" />
                   <p className="w-3/5">{movie.title}</p>
                 </div>
               ))}
