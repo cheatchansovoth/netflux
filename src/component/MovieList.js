@@ -19,7 +19,6 @@ export const MovieList = () => {
                 `https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&with_genres=28`
               );
               const data = await response.json();
-              console.log(data.results);
               setMovies(data.results);
             };
     const fetchMoviesAnimaton = async () => {
@@ -68,14 +67,14 @@ export const MovieList = () => {
       return (
         <div className='space-y-5'>
         <h1 className='text-4xl font-bold font-sans hero-content'>Action</h1>
-        <div className="space-y-5 w-4/5 lg:mx-auto ">
+        <div className="lg:space-y-5 lg:w-4/5 lg:mx-auto ">
           <Slider arrows={true} {...settings}>
             {movie
               // .filter((movie) => movie.genre_id.includes("Action"))
               .map((movie) => (
                 <div key={movie.title} className='cursor-pointer' onClick={()=>handleClick(movie.id)}>
                   <img src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt={movie.title}  className="h-[30vh] transition duration-500 hover:opacity-50" />
-                  <p className="w-3/5">{movie.title}</p>
+                  <p className="lg:w-3/5">{movie.title}</p>
                 </div>
               ))}
           </Slider>

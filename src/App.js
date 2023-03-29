@@ -13,6 +13,8 @@ import { ActionMovie } from './component/ActionMovie';
 import { Animation } from './component/Animation';
 import { PopularMovie } from './component/PopularMovie';
 import { Register } from './component/Register';
+import PopUp from './component/Popup';
+import { Resetpassword } from './component/Resetpassword';
 function App() {
 
   const [searchMovie,setMovieResult]=useState('');
@@ -24,6 +26,7 @@ function App() {
       <Navbar/>
       <Routes>
         <Route path='/' exact element={<RandomMovie/>}></Route>
+        <Route path='/resetpassword' exact element={<Resetpassword/>}></Route>
         <Route path='/movie' element={<MovieList/>}></Route>
         <Route path='/movies/:id' element={<Movies/>}></Route>
         <Route path='/movie/action' element={<ActionMovie/>}></Route>
