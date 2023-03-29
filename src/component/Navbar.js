@@ -3,10 +3,10 @@ import {useNavigate} from 'react-router-dom';
 import { TbSearch } from "react-icons/tb";
 import { MovieContext } from './movieContext';
 import { FcGoogle } from "react-icons/fc";
+import { AiOutlineLogin } from "react-icons/ai";
 import {auth,GoogleAuth} from './Authentication/firebase';
-import {signInWithEmailAndPassword,signInWithPopup,signOut} from 'firebase/auth'
+import {signInWithEmailAndPassword,signInWithPopup} from 'firebase/auth'
 export const Navbar = () => {
-
   const API_KEY='637d2db3e80388b60c60f95c464752e6';
   const {searchMovie,setMovieResult } = useContext(MovieContext);
   const navigate = useNavigate();
@@ -22,16 +22,23 @@ export const Navbar = () => {
   const [email,setEmail]=useState("");
   const [password,setPassword]=useState("");
   const [Error,setError]=useState("");
-  const SignIn= async ()=>
+  const [showModel,setShowModel]=useState(false);
+
+  const handleModel=()=>
   {
+    setShowModel(!showModel);
+  }
+  const SignIn= async (event)=>
+  {
+    event.preventDefault();
     try{
        await signInWithEmailAndPassword(auth,email,password);
        const user=auth.currentUser;
-       console.log(user);
+      //  console.log(user);
        if(user)
        {
-        // localStorage.setItem('__userinfo',JSON.stringify(user));
-        navigate('/');
+        navigate(`/`);
+        localStorage.setItem('__userinfo',JSON.stringify(user));
        }
     }
     catch(err)
@@ -51,7 +58,13 @@ export const Navbar = () => {
   };
   return (
     <div>
-
+{
+  showModel && (<div className='h-[50vh] w-1/2 top-[25%] right-[25%] absolute bg-base-300 z-40'>
+  <div className='flex justify-between items-center'>
+    <h1>Login</h1>
+  </div>
+</div>)
+}
 <div className="navbar bg-base-100">
   <div className="navbar-start">
     <div className="dropdown">
@@ -108,38 +121,9 @@ export const Navbar = () => {
     </div>
   </div>
 </div>
-
   </form>
   <div className="navbar-end">
-{/* The button to open modal */}
-<label htmlFor="my-modal-3" className="btn">Login</label>
-    {/* Put this part before </body> tag */}
-    <input type="checkbox" id="my-modal-3" className="modal-toggle" />
-    <div className="modal ">
-      <div className="modal-box relative text-center">
-        <p className='text-2xl font-bold my-5'>Login</p>
-        <label htmlFor="my-modal-3" className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
-        <form className='space-y-5 flex flex-col justify-center items-center' onSubmit={SignIn}>
-        <input type="text" placeholder="Username" className="input input-bordered input-info w-full max-w-xs" onChange={(event)=>
-        {
-          setEmail(event.target.value);
-        }}/>
-        <input type="password" placeholder="Password" className="input input-bordered input-info w-full max-w-xs" onChange={(event)=>
-        {
-          setPassword(event.target.value)
-        }}/>
-        <button className="btn btn-info w-[70%]" type='submit'>Login</button>
-        </form>
-        <p className='cursor-pointer text-blue-400 my-3'>Forget password ?</p>
-        <p className='mb-3'>Not a Member ? <span className='cursor-pointer text-blue-400' onClick={SignUpOnClick}>Sign up</span></p>
-        <hr class="border-t-4 border-solid border-base-200"></hr>
-        <p>OR Using</p>
-        <div className="flex justify-center items-center my-3">
-        <p className="text-4xl cursor-pointer" onClick={SignInWithGoogle}><FcGoogle/></p>
-        </div>
-
-      </div>
-    </div>
+    <a onClick={handleModel}>Login</a>
   </div>
 </div>
     </div>

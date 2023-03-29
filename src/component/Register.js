@@ -56,7 +56,7 @@ export const Register = () => {
                 {
                   setConfirmPassword(event.target.value)
                 }}></input>
-                <button className='btn btn-info hover:bg-gray-500 hover:rounded-xl duration-500' type='submit'>Register</button>
+                <button className='btn btn-info hover:bg-gray-500 hover:rounded-xl duration-500' type='submit'>CREATE AN ACCOUNT</button>
             </div>
             </form>
          </div>
