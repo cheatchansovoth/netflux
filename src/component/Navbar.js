@@ -16,6 +16,11 @@ export const Navbar = () => {
       navigate(`/search/${searchMovie}`);
     }
   };
+  const handleClick=(id)=>
+  {
+    navigate(`/movies/${id}`);
+  }
+  ;
   const SignUpOnClick=()=>
   {
     navigate(`/register`);
@@ -26,7 +31,21 @@ export const Navbar = () => {
   const [Error,setError]=useState("");
   const [showModel,setShowModel]=useState(false);
   const [showSearch,setShowSearch]=useState(false);
+  const [getMovie,setGetMovie]=useState([]);
+  const [isUserLoggedIn, setIsUserLoggedIn] = useState(
+    localStorage.getItem('__userinfo') !== null
+  );
 
+  useEffect(() => {
+    const searchMovies = async () => {
+      const response = await fetch(
+        `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=${searchMovie}`
+      );
+      const data = await response.json();
+      setGetMovie(data.results);
+    };
+    searchMovies();
+  }, [getMovie]);
   const handleModel=()=>
   {
     setShowModel(!showModel);
@@ -42,6 +61,7 @@ export const Navbar = () => {
        {
         localStorage.setItem('__userinfo',JSON.stringify(user));
         setShowModel(false);
+        setIsUserLoggedIn(true);
         navigate(`/`);
        }
        setShowModel(false);
@@ -50,6 +70,11 @@ export const Navbar = () => {
     {
       setError('Invalid Credentials');
     }
+  };
+  const handleLogout = () => {
+    // Perform logout action here, e.g. remove user info from local storage
+    localStorage.removeItem('__userinfo');
+    setIsUserLoggedIn(false);
   };
   const SignInWithGoogle= async ()=>
   {
@@ -64,19 +89,19 @@ export const Navbar = () => {
   return (
     <div className='relative z-10'>
 {
-  showModel && (<div className='h-[50vh] sm:h-[80vh] w-screen lg:w-2/3 top-[10%] lg:top-[25%] lg:right-[17%] absolute bg-base-300 z-40 rounded-2xl'>
+  showModel && (<div className='h-[50vh] sm:h-[60vh] lg:w-1/2 top-[10%] lg:top-[50%] lg:right-[25%] absolute bg-base-300 z-40 rounded-2xl'>
     <div className='flex justify-end mr-[1%]'>
   <span className='text-left text-xl cursor-pointer' onClick={()=>setShowModel(false)}>X</span>
   </div>
   <div className='flex flex-col justify-between items-center '>
     <form onSubmit={SignIn}>
-    <div className='flex flex-col h-[50vh] sm:h-[80vh] w-screen justify-center items-center space-y-2 sm:space-y-5'>
+    <div className='flex flex-col h-[50vh] sm:h-[60vh] w-screen justify-center items-center space-y-2 sm:space-y-5'>
     <h1 className='text-2xl font-semibold'>Login</h1>
     <input type="text" placeholder="Username" className="input input-bordered input-info w-full max-w-xs" onChange={(event)=>
     {
       setEmail(event.target.value);
     }} />
-    <input type="text" placeholder="Password" className="input input-bordered input-info w-full max-w-xs" onChange={(event)=>
+    <input type="password" placeholder="Password" className="input input-bordered input-info w-full max-w-xs" onChange={(event)=>
     {
       setPassword(event.target.value);
     }}/>
@@ -155,7 +180,15 @@ export const Navbar = () => {
 </div>
   </form>
   <div className="navbar-end">
-    <button onClick={handleModel} className='btn btn-accent'>Login</button>
+    {isUserLoggedIn ? (
+        <button onClick={handleLogout} className='btn btn-accent'>
+          Logout
+        </button>
+      ) : (
+        <button onClick={handleModel} className='btn btn-accent'>
+          Login
+        </button>
+      )}
   </div>
 </div>
   {showSearch &&
@@ -167,7 +200,20 @@ export const Navbar = () => {
       }
       onKeyDown={handleKeyDown}
       />
-</div>)}
+      </div>)}
+    {searchMovie !== "" && (
+  <div className='absolute w-screen '>
+    <div className='flex flex-col w-[100%] my-3 items-center sm:h-[15vh] h-[20vh]'>
+      {getMovie
+        .filter((getMovie, index) => index < 5)
+        .map((movie) => (
+          <div key={movie.title} className='flex'>
+            <p className="font-semibold hover:text-base-100 cursor-pointer" onClick={()=>handleClick(movie.id)}>{movie.title}</p>
+          </div>
+        ))}
+    </div>
+  </div>
+)}
   </div>
   )
 }
