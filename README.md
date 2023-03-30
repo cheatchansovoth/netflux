@@ -1,31 +1,49 @@
-# Create React App
+# Netflux
 
-This directory is a brief example of a [Create React App](https://github.com/facebook/create-react-app) site that can be deployed to Vercel with zero configuration.
+Netflux is a small movie website designed for educational purposes. It offers a variety of TV shows and movies, including action, animation, and more.
+# Features
 
-## Deploy Your Own
+    Browse through a wide selection of TV shows and movies
+    Filter content by category, genre, and rating
+    Search for specific titles
+    Register an account using Firebase Authentication to access protected routes
 
-Deploy your own Create React App project with Vercel.
+# Protected Routes
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/vercel/vercel/tree/main/examples/create-react-app&template=create-react-app)
+The following routes are protected and require user authentication:
 
-_Live Example: https://create-react-template.vercel.app/_
+    /movies/action - view and access protected action movies
+    /movies/animation - view and access protected animation movies
+    /tvshows - view and access protected TV shows
 
-## Available Scripts
+# Technologies Used
 
-In the project directory, you can run:
+    HTML
+    CSS
+    JavaScript
+    React
+    Firebase Authentication
 
-### `npm start`
+# Installation
 
-Runs the app in the development mode. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+    Clone the repository to your local machine
+    Navigate to the project directory in your terminal
+    Install dependencies using the command npm install
+    Start the development server using the command npm start
 
-The page will reload when you make changes. You may also see any lint errors in the console.
+# Firebase Authentication
 
-### `npm test`
+This website uses Firebase Authentication to handle user authentication. To set up Firebase Authentication for your own project, follow these steps:
 
-Launches the test runner in the interactive watch mode. See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    Create a Firebase project in the Firebase Console
+    Add the Firebase configuration object to your project
+    Install the Firebase SDK using the command npm install firebase
+    Set up Firebase Authentication providers in the Firebase Console
+    Use the Firebase SDK to handle user authentication in your React app
 
-### `npm run build`
+# Contributing
 
-Builds the app for production to the `build` folder.
+If you would like to contribute to this project, please submit a pull request.
+License
 
-It correctly bundles React in production mode and optimizes the build for the best performance. The build is minified and the filenames include the hashes.
+This project is licensed under the MIT License.
