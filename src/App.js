@@ -13,7 +13,6 @@ import { ActionMovie } from './component/ActionMovie';
 import { Animation } from './component/Animation';
 import { PopularMovie } from './component/PopularMovie';
 import { Register } from './component/Register';
-import PopUp from './component/Popup';
 import { Resetpassword } from './component/Resetpassword';
 function App() {
 

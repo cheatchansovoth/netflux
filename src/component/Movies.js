@@ -14,6 +14,11 @@ export const Movies = () => {
     }
     ;
         useEffect(() => {
+          const userInfo = localStorage.getItem('__userinfo');
+          if (!userInfo) {
+            alert('Please login to access this page');
+            navigate('/');
+          }
         const fetchMoviesAction = async () => {
             const response = await fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=${API_KEY}`);
             const data = await response.json();

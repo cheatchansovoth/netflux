@@ -19,6 +19,12 @@ export const ActionMovie = () => {
   }
   ;
   useEffect(() => {
+
+    const userInfo = localStorage.getItem('__userinfo');
+    if (!userInfo) {
+      alert('Please login to access this page');
+      navigate('/');
+    }
     const searchMoviesAction = async () => {
       const response = await fetch(
         `https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&with_genres=28&page=${activeButton}`
