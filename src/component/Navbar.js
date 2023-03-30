@@ -62,7 +62,7 @@ export const Navbar = () => {
     }
   };
   return (
-    <div>
+    <div className='relative z-10'>
 {
   showModel && (<div className='h-[50vh] sm:h-[80vh] w-screen lg:w-2/3 top-[10%] lg:top-[25%] lg:right-[17%] absolute bg-base-300 z-40 rounded-2xl'>
     <div className='flex justify-end mr-[1%]'>

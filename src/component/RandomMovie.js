@@ -14,7 +14,7 @@ export const RandomMovie = () => {
     return () => clearInterval(intervalId);
   }, []);
   return (
-    <div className='relative z-1'>
+    <div className='relative z-0'>
         <div className="hero min-h-[60vh]"  style={{ backgroundImage: `url(${randomMovie.image_url})` }}>
         <div className="hero-overlay bg-opacity-60"></div>
         <div className="hero-content text-center text-neutral-content">
