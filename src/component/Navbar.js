@@ -88,7 +88,7 @@ export const Navbar = () => {
   };
   return (
     <div className='relative z-10'>
-{
+{/* {
   showModel && (<div className='h-[50vh] sm:h-[60vh] lg:w-1/2 top-[10%] lg:top-[50%] lg:right-[25%] absolute bg-base-300 z-40 rounded-2xl'>
     <div className='flex justify-end mr-[1%]'>
   <span className='text-left text-xl cursor-pointer' onClick={()=>setShowModel(false)}>X</span>
@@ -121,7 +121,7 @@ export const Navbar = () => {
 
   </div>
 </div>)
-}
+} */}
 <div className="navbar bg-base-100">
   <div className="navbar-start">
     <div className="dropdown">
@@ -179,7 +179,7 @@ export const Navbar = () => {
   </div>
 </div>
   </form>
-  <div className="navbar-end">
+  {/* <div className="navbar-end">
     {isUserLoggedIn ? (
         <button onClick={handleLogout} className='btn btn-accent'>
           Logout
@@ -189,7 +189,7 @@ export const Navbar = () => {
           Login
         </button>
       )}
-  </div>
+  </div> */}
 </div>
   {showSearch &&
   (<div className='flex justify-center my-[2%] sm:hidden'>
